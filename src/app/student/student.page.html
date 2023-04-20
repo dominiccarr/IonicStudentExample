@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-title>{{student.name}}</ion-card-title>
+      <ion-card-subtitle>Student at ATU</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{student.name}} studies {{student.subjects[0]}} and {{student.subjects[1]}} at ATU. Her GPA is {{student.GPA}}
+      <ion-button (click)="presentAlert()">Click Me</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+
+    <ion-item>
+      <h2>Name: {{ student.name }}</h2> 
+    </ion-item>
+
+    <ion-item>
+      <h2>Age: {{ student.age }}</h2> 
+    </ion-item>
+
+    <ion-item>
+      <h2>GPA: {{ student.GPA }}</h2> 
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list> 
+    <ion-item>
+      Subjects
+    </ion-item>
+    <ion-item *ngFor="let subject of student.subjects">
+      <h2>{{ subject }}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
