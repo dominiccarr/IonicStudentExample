@@ -24,7 +24,7 @@ export class StudentPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Alert',
       subHeader: 'Important message',
-      message: this.student.name + 'is a great student!',
+      message: this.student.name + ' is a great student!',
       buttons: ['OK'],
     });
 

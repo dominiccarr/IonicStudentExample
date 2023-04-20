@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ event.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>{{event.name}}</ion-card-title>
+      <ion-card-subtitle>Happening {{event.date}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{event.info}}
+    </ion-card-content>
+    <ion-input label="Input with placeholder" placeholder="Enter event note" [(ngModel)]="eventNote" (ionChange)='onChangeTime()'></ion-input>
+    
+  </ion-card>
+
+</ion-content>
